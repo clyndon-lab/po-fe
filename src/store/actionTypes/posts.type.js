@@ -1,0 +1,7 @@
+const PostsActionTypes = {
+  FETCH_POST_START: 'FETCH_POST_START',
+  FETCH_POST_SUCCESS: 'FETCH_POST_SUCCESS',
+  FETCH_POST_FAILURE: 'FETCH_POST_FAILURE',
+}
+
+export default PostsActionTypes

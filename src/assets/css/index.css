@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    font-weight: 500 !important;
+    font-size: 32px !important;
+    line-height: 38px !important;
+  }
+
+  h2 {
+    @apply text-2xl font-bold md:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl font-bold md:text-3xl;
+  }
+
+  h4 {
+    @apply text-lg font-bold;
+  }
+
+  html,
+  body {
+    @apply text-sm md:text-base font-normal bg-mainbg font-barlow;
+  }
+
+  .container {
+    @apply mx-auto;
+  }
+
+  input {
+    outline: 0;
+  }
+}
+
+body {
+  font-family: 'Barlow', sans-serif !important;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar {
+  @apply bg-white pl-1 pr-[1.5rem] py-[4.75rem] ml-1 max-h-screen overflow-y-auto;
+}
+
+.header-title {
+  @apply text-dark font-barlow text-xl;
+}
+
+.header-subtitle {
+  @apply text-lg font-medium font-barlow text-gray-5 mt-3;
+}
+
+.po-btn {
+  @apply min-w-[105px] rounded-[3px] font-barlow text-lg font-medium;
+
+  line-height: 1rem !important;
+}
+
+.po-btn:disabled {
+  @apply text-dark border-dark;
+
+  background-color: #e0e0e0;
+}
+
+.primary-btn {
+  @apply bg-yellow border-yellow;
+}
+
+.primary-btn:hover,
+.primary-btn:active,
+.primary-btn:focus {
+  @apply bg-yellow-300 text-dark border-yellow-300;
+}
+
+.secondary-btn {
+  @apply text-yellow border-yellow;
+}
+
+.secondary-btn:hover,
+.secondary-btn:active,
+.secondary-btn:focus {
+  @apply bg-yellow-100 text-yellow border-yellow;
+}
+
+.danger-btn {
+  @apply text-red border-red;
+}
+
+.danger-btn:hover,
+.danger-btn:active,
+.danger-btn:focus {
+  @apply text-red bg-red-100 border-red;
+}
+
+.setting-card {
+  @apply rounded-2xl flex bg-white py-7 pr-[34px] pl-9 min-h-[90px] cursor-pointer;
+
+  border: 2px solid transparent;
+}
+
+.setting-card:hover {
+  transition: all 0.2s ease-out;
+  border: 2px solid #2499ff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8e8e93;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(117, 117, 117);
+}
+
+.custom-pagination .ant-pagination-item a {
+  display: block;
+  padding: 0 6px;
+  color: #6c7e89;
+  transition: none;
+  font-size: 12px;
+}
+
+.custom-pagination .ant-pagination-item {
+  border: none !important;
+}
+
+.custom-pagination .ant-pagination-item-active a {
+  color: #fff;
+  font-size: 12px;
+
+  @apply bg-secondary rounded-[3px];
+}
+
+.ant-collapse-icon-position-right > .ant-collapse-item > .ant-collapse-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  padding: 5px 16px 0 16px;
+}
+
+.ant-collapse-ghost > .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box {
+  padding: 0 16px;
+}
+
+.custom-collapse .ant-collapse-icon-position-right > .ant-collapse-item > .ant-collapse-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.logout-btn {
+  transition: all 0.3s ease;
+
+  @apply text-lg hover:text-secondary pl-[14px] hover:bg-yellow-label rounded-lg;
+}
+
+.logout-btn-exp {
+  transition: all 0.3s ease;
+
+  @apply text-lg hover:text-secondary pl-6 hover:bg-yellow-label rounded-lg;
+}
+
+@media only screen and (max-width: 1600px) {
+  .responsive-logout-text {
+    display: none;
+  }
+
+  .logout-btn {
+    @apply pl-[14px];
+  }
+}

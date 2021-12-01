@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-3xl font-bold md:text-5xl;
+  }
+
+  h2 {
+    @apply text-2xl font-bold md:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl font-bold md:text-3xl;
+  }
+
+  h4 {
+    @apply text-lg font-bold;
+  }
+
+  body {
+    @apply text-sm md:text-base;
+  }
+
+  .container {
+    @apply mx-auto;
+  }
+
+  input {
+    outline: 0;
+  }
+}
+
+.ant-menu-light .ant-menu-item-active.ant-menu-item-active,
+.ant-menu-light .ant-menu-item-selected.ant-menu-item-selected {
+  @apply text-secondary bg-yellow-label rounded-lg;
+}
+
+.ant-menu-light .ant-menu-item-selected.ant-menu-item-selected a {
+  @apply text-secondary;
+}
+
+.ant-menu-inline .ant-menu-item {
+  overflow: visible;
+}
+
+.ant-menu-inline .ant-menu-selected::after,
+.ant-menu-vertical .ant-menu-item::after,
+.ant-menu-vertical-left .ant-menu-item::after,
+.ant-menu-vertical-right .ant-menu-item::after,
+.ant-menu-inline .ant-menu-item::after {
+  @apply bg-yellow rounded-full w-2 h-full absolute;
+
+  left: -12px;
+  border-right: 0 !important;
+}
+
+.ant-menu-item .ant-menu-item-icon + span,
+.ant-menu-submenu-title .ant-menu-item-icon + span,
+.ant-menu-item .anticon + span,
+.ant-menu-submenu-title .anticon + span {
+  margin-left: 25px;
+}
+
+.ant-table-thead > tr > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  display: none;
+}
+
+.ant-table-thead > tr > th {
+  padding: 5px;
+}
+
+.order-table.ant-table-thead > tr > th {
+  color: #16232c;
+  font-weight: bold;
+}
+
+.order-btn {
+  @apply min-w-[132px] h-[52px] rounded-[3px] font-barlow text-lg font-medium;
+}
+
+.ant-tabs-tab + .ant-tabs-tab {
+  margin: 0 0 0 22px;
+}

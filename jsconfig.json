@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": "./src",
+    "paths": {
+      "@apis": ["apis"],
+      "@apis/*": ["apis/*"],
+      "@assets": ["assets"],
+      "@assets/*": ["assets/*"],
+      "@components": ["components"],
+      "@components/*": ["components/*"],
+      "@store": ["store"],
+      "@store/*": ["store/*"],
+      "@views": ["views"],
+      "@views/*": ["views/*"],
+      "@utils": ["utils"],
+      "@utils/*": ["utils/*"]
+    }
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules"]
+}
